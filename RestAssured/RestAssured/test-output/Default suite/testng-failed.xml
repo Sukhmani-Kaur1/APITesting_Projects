@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TrelloAPI">
+      <class name="com.simpleBooks.SimpleBooks">
         <methods>
-          <include name="UpdateBoardName"/>
+          <include name="getOrder"/>
+          <include name="Authorization"/>
+          <include name="Order"/>
+          <include name="deleteOrder"/>
         </methods>
-      </class> <!-- TrelloAPI -->
+      </class> <!-- com.simpleBooks.SimpleBooks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
