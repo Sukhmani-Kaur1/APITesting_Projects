@@ -1,3 +1,4 @@
+package com.trello;
 import static org.hamcrest.CoreMatchers.is;
 
 import org.testng.annotations.Test;
@@ -50,13 +51,14 @@ public class TrelloAPI {
 		String jsonResponseString = response.asString();
 		System.out.println(jsonResponseString);
 		JsonPath js = new JsonPath(jsonResponseString);
+		
 	}
 
 	@Test(priority = 3)
 	public void UpdateBoardDesc() {
 		RestAssured.baseURI = baseURL;
 		String desc = "{\"desc\":\"this is the board description\"}";
-		Response response = RestAssured.given().body(desc).queryParam("key", key).queryParam("token", token)
+		Response response = RestAssured.given().contentType("application/json").body(desc).queryParam("key", key).queryParam("token", token)
 				.header("content-Type", "application/json").when().put("/1/boards/" + id).then().assertThat()
 				.statusCode(200).contentType(ContentType.JSON).extract().response();
 		String jsonResponseString = response.asString();

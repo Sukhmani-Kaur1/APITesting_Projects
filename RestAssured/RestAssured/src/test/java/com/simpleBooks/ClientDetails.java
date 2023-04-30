@@ -1,4 +1,4 @@
-package StepDefinition;
+package com.simpleBooks;
 
 public class ClientDetails {
 	String clientName;
