@@ -13,7 +13,7 @@ module.exports = defineConfig({
     // specPattern: "cypress/UAT/features/*.{js,feature}",
     specPattern:
       // use this for normal
-      "C:\\Users\\Administrator\\OneDrive\\Desktop\\Cypress_Automation\\cypress\\integration\\example\\*.{js,feature}",
+      "C:\\Users\\Administrator\\OneDrive\\Desktop\\Api-Projects\\APITesting_Projects\\CypressTestAPI\\cypress\\integration\\example\\*.{js,feature}",
   },
   //for multiple browser
   chromeWebSecurity: false,
